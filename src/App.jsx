@@ -3,11 +3,11 @@ import "./style.css"; // bg1, bg2, etc. + new animation
 
 const sections = [
   { className: "bg1", title: "Hello", showLoading: true },
-  { className: "bg2", title: "Adventure Awaits" },
-  { className: "bg3", title: "Feel the Freedom" },
-  { className: "bg4", title: "Explore the Wild" },
-  { className: "bg5", title: "Breathe Deeply" },
-  { className: "bg6", title: "See the Horizon" },
+  { className: "bg2", title: "Kese Ho !" },
+  { className: "bg3", title: "Apke liye Surprise Hai " },
+  { className: "bg4", title: "Mere Pass !" },
+  { className: "bg5", title: "Lets Ready !" },
+  { className: "bg6", title: "Love Birds..." },
 ];
 
 function App() {
