@@ -1,0 +1,41 @@
+import React, { useEffect } from "react";
+import "./style.css"; // bg1, bg2, etc. + new animation
+
+const sections = [
+  { className: "bg1", title: "Hello", showLoading: true },
+  { className: "bg2", title: "Adventure Awaits" },
+  { className: "bg3", title: "Feel the Freedom" },
+  { className: "bg4", title: "Explore the Wild" },
+  { className: "bg5", title: "Breathe Deeply" },
+  { className: "bg6", title: "See the Horizon" },
+];
+
+function App() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  return (
+    <div className="w-full scroll-smooth">
+      {sections.map((section, index) => (
+        <section
+          key={index}
+          className={`relative flex flex-col items-center justify-center min-h-screen bg-fixed bg-center bg-cover ${section.className}`}
+        >
+          <div className="text-center px-4">
+            <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold px-6 py-4 rounded-2xl bg-black/40 backdrop-blur-md shadow-xl ring-1 ring-white/20 transition duration-500 ease-in-out">
+              {section.title}
+              {section.showLoading && (
+                <span className="block text-lg sm:text-xl md:text-2xl mt-2 loading-wave">
+                  Loading...
+                </span>
+              )}
+            </h1>
+          </div>
+        </section>
+      ))}
+    </div>
+  );
+}
+
+export default App;
